@@ -1,0 +1,2 @@
+include ':app', ':toasttalk'
+rootProject.name='ArtifactsJcenter'
