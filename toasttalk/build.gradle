@@ -32,3 +32,29 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+
+//publish jcenter
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'toast-talk'
+
+    publishedGroupId = 'com.larva.flying'
+    libraryName = 'ToastTalk'
+    artifact = 'toast-talk'
+
+    libraryDescription = 'First time try publish on Android'
+
+    siteUrl = 'https://github.com/MMGD201/ArtifactsJcenter'
+    gitUrl = 'https://github.com/MMGD201/ArtifactsJcenter.git'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'ijnijn006'
+    developerName = 'jhou min yan'
+    developerEmail = 'ijnijn006@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+//publish jcenter
