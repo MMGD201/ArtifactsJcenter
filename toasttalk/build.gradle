@@ -34,7 +34,7 @@ dependencies {
 
 //publish jcenter
 ext {
-    bintrayRepo = 'maven'
+    bintrayRepo = 'simple_repositiory'//bintray的package name
     bintrayName = 'toasttalk'
 
     publishedGroupId = 'com.larva.flying'
