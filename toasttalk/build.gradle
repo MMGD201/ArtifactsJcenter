@@ -35,11 +35,11 @@ dependencies {
 //publish jcenter
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'toast-talk'
+    bintrayName = 'toasttalk'
 
     publishedGroupId = 'com.larva.flying'
     libraryName = 'ToastTalk'
-    artifact = 'toast-talk'
+    artifact = 'toasttalk'
 
     libraryDescription = 'First time try publish on Android'
 
