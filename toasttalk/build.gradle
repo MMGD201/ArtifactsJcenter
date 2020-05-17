@@ -38,7 +38,7 @@ ext {
     bintrayName = 'toasttalk'
 
     publishedGroupId = 'com.larva.flying'
-    libraryName = 'ToastTalk'
+    libraryName = 'toasttalk'
     artifact = 'toasttalk'
 
     libraryDescription = 'First time try publish on Android'
