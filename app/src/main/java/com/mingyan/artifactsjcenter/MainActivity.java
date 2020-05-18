@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickShort(View view){
-        ToastTalk.vShort(view.getContext(), "ShorShort HelloWorld!");
+        ToastTalk.vShort(view.getContext(), "ShorShort HelloWorld!!");
     }
 
     public void clickLong(View view){
-        ToastTalk.vLong(this, "LongLong HelloWorld!");
+        ToastTalk.vLong(this, "LongLong HelloWorld!!");
     }
 
 }
