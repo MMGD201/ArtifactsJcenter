@@ -12,7 +12,7 @@ package com.mingyan.artifactsjcenter;
  * Project :  Community Support - Open Source Project Repository Hosting
  * Issue Type : New Project
  * Summary : for example, The Cheese Library
- * Group Id : 放置根GROUP_ID，例如com.inthecheeselibrary。獲得批准後，每個庫都以com.inthecheeselibrary開頭，例如com.inthecheeselibrary.somelib。
+ * Group Id : 放置根GROUP_ID[不可以自記瞎掰要擁有該domain]，例如com.inthecheeselibrary。獲得批准後，每個庫都以com.inthecheeselibrary開頭，例如com.inthecheeselibrary.somelib。
  * Project URL : 放置您計劃分發的任何庫的URL，例如https://github.com/nuuneoi/FBLikeAndroid
  * SCM URL : 源代碼管理的URL，例如https://github.com/nuuneoi/FBLikeAndroid.git
  * 其餘部分保持不變，然後單擊“ 創建”。就這樣。現在，這是最困難的部分……耐心等待……平均大約需要1週或更多時間。之後，您將被授予將您的庫分發到Maven Central的權限。
