@@ -46,7 +46,7 @@ ext {
     siteUrl = 'https://github.com/MMGD201/ArtifactsJcenter'
     gitUrl = 'https://github.com/MMGD201/ArtifactsJcenter.git'
 
-    libraryVersion = '0.1.0'
+    libraryVersion = '0.1.1'
 
     developerId = 'ijnijn006'
     developerName = 'jhou min yan'

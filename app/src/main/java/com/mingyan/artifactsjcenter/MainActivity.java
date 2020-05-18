@@ -52,7 +52,7 @@ package com.mingyan.artifactsjcenter;
  * 第7部分：將庫轉發到Maven Central
  * 首先 1_Bintray軟件包必須已經鏈接到jcenter。
  *          2_Maven Central上的存儲庫已被批准打開(就是第2部分的sonatype.org創見issues)
- * 到Bintray的主頁點創建了的xxxpackage(maven)進去再點*/
+ * 到Bintray的主頁點創建了的xxxpackage(maven)進去再選點該xxx(Package Name)若是Maven Central上的存儲庫已被批准，只需單擊 軟件包詳細信息頁面上的Maven Central鏈接即可。*/
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
