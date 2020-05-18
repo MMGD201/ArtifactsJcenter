@@ -7,11 +7,15 @@ package com.mingyan.artifactsjcenter;
  * Issues tracker :  adnroid project上傳在github的網址點Issues進去的網址，
  * Version control : 同Website網址。
  * 如果您沒有計劃將庫上載到Maven Central，則可以跳過第2部分和第3部分。
- * 第二部分 - 1_為Maven Central創建issues.sonatype.org帳戶，再按create button創一個Issues。
- * 填寫以下信息：
+ * 第二部分 - 1_為Maven Central創建issues.sonatype.org帳戶，再按create button創一個Issues，
+ * 填寫以下信息：(在剛創好帳號時點這個進去create issues裡面的欄位都未全出現，20200518_20:xx再次點create嘗試創建 Issue以下欄位材都有出現)
  * Project :  Community Support - Open Source Project Repository Hosting
  * Issue Type : New Project
  * Summary : for example, The Cheese Library
+ * Group Id : 放置根GROUP_ID，例如com.inthecheeselibrary。獲得批准後，每個庫都以com.inthecheeselibrary開頭，例如com.inthecheeselibrary.somelib。
+ * Project URL : 放置您計劃分發的任何庫的URL，例如https://github.com/nuuneoi/FBLikeAndroid
+ * SCM URL : 源代碼管理的URL，例如https://github.com/nuuneoi/FBLikeAndroid.git
+ * 其餘部分保持不變，然後單擊“ 創建”。就這樣。現在，這是最困難的部分……耐心等待……平均大約需要1週或更多時間。之後，您將被授予將您的庫分發到Maven Central的權限。
  * 再來去Bintray的下拉有登出選項處選Edit Profile > Accounts > 選google登入,然後Sonatype OSS User填sonatype帳號名，Sonatype OSS password填sonatype密碼。
  * 第3部分：在Bintray中啟用自動簽名
  * 先安裝Git Bash，通過命令行生成密鑰 gpg --gen-key，查看創建的密鑰的信息gpg --list-keys，
@@ -39,7 +43,16 @@ package com.mingyan.artifactsjcenter;
  * 這兩個apply from增加在{ }之外各自單獨一行，要一模一樣不用改nuuneoi。
  * 第5部分：將庫上傳到您的Bintray空間
  * 轉到Android Studio上的Terminal，檢查代碼的正確性並構建庫文件，輸入命令gradlew install，沒錯將顯示BUILD SUCCESSFUL，
- * 將生成的文件上傳到bintray，輸入gradlew bintrayUpload 沒錯將顯示 SUCCESSFUL。*/
+ * 將生成的文件上傳到bintray，輸入gradlew bintrayUpload 沒錯將顯示 SUCCESSFUL。
+ * 到此Library尚未發到Maven Central，也沒在jcenter。
+ * 第6部分：將Bintray用戶存儲庫同步到jcenter
+ * 點進Bintray的xxxPackage(Maven) > 再點進該Library > Linked to (阿拉伯數字x)的右邊 > 點Add to JCenter > 畫面轉跳後直接點Send不用特別作什麼。
+ * 至此等待2-3個小時(5+[2-3]=7-8)，讓Bintray小組批准我們的請求。同步請求獲得批准後，您將收到一封電子郵件，通知您進行更改。現在讓我們檢查Web界面，您將在剛剛的Linked To  部分中看到一些更改，
+ * 實際等了1.5小時左右獲得批准，註冊Bintray的mail和Bintray都會收到通知，Linked To(數字有變) 右邊不再是Add to JCenter變成Stage snapshots on oss.jfrog.org。
+ * 第7部分：將庫轉發到Maven Central
+ * 首先 1_Bintray軟件包必須已經鏈接到jcenter。
+ *          2_Maven Central上的存儲庫已被批准打開(就是第2部分的sonatype.org創見issues)
+ * 到Bintray的主頁點創建了的xxxpackage(maven)進去再點*/
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
