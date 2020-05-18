@@ -34,7 +34,7 @@ dependencies {
 
 //publish jcenter
 ext {
-    bintrayRepo = 'simple_repositiory'//bintray的package name
+    bintrayRepo = 'simple_repositiory'//bintray的package name，錯了會Could not sign version '0.1.0': HTTP/1.1 404 Not Found [message:Repo 'maven' was not found]
     bintrayName = 'toasttalk'
 
     publishedGroupId = 'com.larva.flying'
