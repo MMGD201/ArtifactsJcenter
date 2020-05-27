@@ -45,14 +45,29 @@ package com.mingyan.artifactsjcenter;
  * 轉到Android Studio上的Terminal，檢查代碼的正確性並構建庫文件，輸入命令gradlew install，沒錯將顯示BUILD SUCCESSFUL，
  * 將生成的文件上傳到bintray，輸入gradlew bintrayUpload 沒錯將顯示 SUCCESSFUL。
  * 到此Library尚未發到Maven Central，也沒在jcenter。
+ *
  * 第6部分：將Bintray用戶存儲庫同步到jcenter
- * 點進Bintray的xxxPackage(Maven) > 再點進該Library > Linked to (阿拉伯數字x)的右邊 > 點Add to JCenter > 畫面轉跳後直接點Send不用特別作什麼。
+ * 點進Bintray的xxxPackage(Maven) > 再點進該Library > Linked to (阿拉伯數字x)的右邊 > 點Add to JCenter(在右上帳號icon 帳號xxx的下面有Actions下拉才有Add to JCenter) > 畫面轉跳後直接點Send不用特別作什麼。
  * 至此等待2-3個小時(5+[2-3]=7-8)，讓Bintray小組批准我們的請求。同步請求獲得批准後，您將收到一封電子郵件，通知您進行更改。現在讓我們檢查Web界面，您將在剛剛的Linked To  部分中看到一些更改，
  * 實際等了1.5小時左右獲得批准，註冊Bintray的mail和Bintray都會收到通知，Linked To(數字有變) 右邊不再是Add to JCenter變成Stage snapshots on oss.jfrog.org。
+ * 到目前為止因為新創sonatype.org帳號導致在sonatype上創建issues時的欄位未出現所以很多沒填，
+ * 可能相當於第2部分不算數，在此toasttalk有成功publish於JCenter，
+ * 但是後來只做第5部分這一步_用AndroidStudio的Terminal直接push到Github的0.1.1版本(有改GroupId)的是不能成功運作的
+ * ，可能只是Add到Bintray，需要用 第6部分Add to JCenter，但是點進該版本已找不到Add to JCenter選項，
+ * [ https://stackoverflow.com/questions/41084693/how-to-update-library-for-new-version-in-bintray   20200520/11:45再次Try to add version很快就依賴成功 ]，
+ * update version on JCenter就是改build.gradle(Module:toasttalk)的ext{ libraryVersion = 'x.x.x' ，改GroupId不能生效本次沒改, version '0.1.3' 改GroupId真的沒用}
+ * ，再點進Bintray的xxxPackage(Maven)或 xxxRepositiory(Maven) > 點選Package Name這邊是toasttalk > 點Add Version > Name填 version , 選日期 , 填描述 > 按Create Version
+ * ，用Android Studio的Terminal輸入gradlew bintrayUpload顯示BUILD SUCCESSFUL很快就可以依賴成功。
+ *
  * 第7部分：將庫轉發到Maven Central
  * 首先 1_Bintray軟件包必須已經鏈接到jcenter。
  *          2_Maven Central上的存儲庫已被批准打開(就是第2部分的sonatype.org創見issues)
- * 到Bintray的主頁點創建了的xxxpackage(maven)進去再選點該xxx(Package Name)若是Maven Central上的存儲庫已被批准，只需單擊 軟件包詳細信息頁面上的Maven Central鏈接即可。*/
+ * 到Bintray的主頁點創建了的xxxpackage(maven)進去再選點該xxx(Package Name)若是Maven Central上的存儲庫已被批准，只需單擊 軟件包詳細信息頁面上的Maven Central鏈接即可。
+ *
+ * How to Publish a Java Library to Maven Central
+ * https://www.youtube.com/watch?v=bxP9IuJbcDQ&t=322s   [  12:46 此方法沒成功]
+ * pom.xml內容是從https://github.com/simpligility/ossrh-demo/blob/master/pom.xml參考的。
+ * */
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;

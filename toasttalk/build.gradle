@@ -37,7 +37,7 @@ ext {
     bintrayRepo = 'simple_repositiory'//bintray的package name，錯了會Could not sign version '0.1.0': HTTP/1.1 404 Not Found [message:Repo 'maven' was not found]
     bintrayName = 'toasttalk'
 
-    publishedGroupId = 'com.github.mmgd201'
+    publishedGroupId = 'com.larva.flying'//com.larva.flying有成功(版本0.1.0和0.1.2)只publish JCenter可以自己瞎掰GroupId但之後update version不能改動GroupId
     libraryName = 'toasttalk'
     artifact = 'toasttalk'
 
@@ -46,7 +46,7 @@ ext {
     siteUrl = 'https://github.com/MMGD201/ArtifactsJcenter'
     gitUrl = 'https://github.com/MMGD201/ArtifactsJcenter.git'
 
-    libraryVersion = '0.1.1'
+    libraryVersion = '0.1.2'
 
     developerId = 'ijnijn006'
     developerName = 'jhou min yan'
